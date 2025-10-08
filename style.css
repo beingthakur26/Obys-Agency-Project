@@ -10,6 +10,18 @@
 html, body {
     width: 100%;    
     height: 100%;
+    background-color: #151515;
+}
+
+#cursor{
+    height: 2.7vw;
+    width: 2.7vw;
+    border-radius: 50%;
+    border: 1px solid #e7deded7;
+    position: fixed;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
 }
 
 #loader{
@@ -17,7 +29,7 @@ html, body {
     height: 100%;
     position: fixed;
     z-index: 999;
-    background-color: #0B0B0B;
+    background-color: #090909;
     padding: 25vh 10vw;
 }
 
@@ -56,14 +68,52 @@ html, body {
 }
 
 .line h2{
-    font-size: 6.5vw;
+    font-size: 5vw;
     text-transform: uppercase   ;
     /* font-family: 'silk serif'; */
     font-weight: 500;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: linear */
+    ;
+}
+
+@keyframes anime{
+    0%{
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    48%{
+        font-family: "Silk Serif";
+        -webkit-text-stroke: #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100%{
+        font-family: "Silk Serif";
+        -webkit-text-stroke: #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+    
 }
 
 #main{
     position: relative;
+    background-color: #030303;
 }
 
 #page1{
@@ -71,4 +121,57 @@ html, body {
     height: 100vh;
     color: white;
     background-color: #151515;
+}
+
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.5vw 6.5vw;
+    /* background-color: #151515; */
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+#nav-part2 h4{
+    font-size: 0.9vw;
+    font-weight: 500;
+}
+
+#page1-content{
+    margin-top: 9vh;
+    margin-left: 27%;
+}
+
+#hero{
+    width: 75%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#hero h1{
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+}
+
+.hero3 h2, .hero3 h3{
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+}
+
+.hero3 h2:hover{
+    -webkit-text-stroke: 3px #fff;
+    color: transparent;
+    font-weight: 500;
 }
