@@ -146,6 +146,18 @@ html, body {
 #page1-content{
     margin-top: 9vh;
     margin-left: 27%;
+    position: relative;
+}
+
+#page1-content::before{
+    position: absolute;
+    content: "01";
+    font-family: "Silk Serif";
+    /* background-color: red; */
+    font-size: 3.8vw;
+    font-weight: 400;
+    left: -13%;
+    /* top: 39%; */
 }
 
 #hero{
@@ -245,6 +257,18 @@ video{
     font-weight: 600;
     text-transform: uppercase;
     margin-left: 27%;
+    position: relative;
+}
+
+#page4-content h1::before{
+    position: absolute;
+    content: "03";
+    font-family: "Silk Serif";
+    /* background-color: red; */
+    font-size: 3.8vw;
+    font-weight: 400;
+    left: -13%;
+    top: 5%;
 }
 
 .underline{
@@ -334,11 +358,159 @@ video{
     padding-bottom: 6vw;
 }
 
-#page5{
+#page5{    
     min-height: 100vh;
     width: 100%;
     background-color: #151515;
     position: relative;
-    padding-top: 10vw;
-    
+    /* padding-top: 10vw; */
 }
+
+.elem1 {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    /* width: 100%; */
+}
+
+.elem1 h1{
+    /* background-color: red; */
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: moveRight;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    text-transform: uppercase;
+}
+
+.elem2 {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    /* width: 100%; */
+}
+
+.elem2 h1{
+    /* background-color: red; */
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: moveLeft;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    text-transform: uppercase;
+}
+
+#page5 h1 span{
+    font-family: "Silk Serif";
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent;
+    display: inline-block;
+}
+
+@keyframes moveRight{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(calc(-100% - 20px));
+    }
+}
+
+@keyframes moveLeft{
+    from{
+        transform: translate(-100%);
+    }
+    to{
+        transform: translate(calc(0 ));
+    }
+}
+
+#page6{    
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+    /* padding-top: 10vw; */
+}
+
+.page5-header{
+    position: relative;
+}
+
+.page5-header svg{
+    position: absolute;
+    right: 15vw;
+    top: 6vw;
+    /* background-color: red; */
+}
+
+#page5-content h1{
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 27%;
+    padding-top: 5vw;
+    position: relative;
+}
+
+#page5-content h1::before{
+    position: absolute;
+    content: "04";
+    font-family: "Silk Serif";
+    font-size: 3.8vw;
+    font-weight: 400;
+    left: -13%;
+    top: 39%;
+}
+
+.underline-page5{
+    border-bottom: 2px solid rgba(230, 225, 225, 0.484);
+    /* margin-top: 4vw; */
+    margin-left: 27%;
+    margin-right: 6vw;
+    margin-top: 4vw;
+    margin-bottom: 3vw;
+}
+
+.page5-div{
+    width: 67vw;
+    /* background-color: red; */
+    margin-left: 27%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3vw 0;
+}
+
+#page5-box{
+    width: 18vw;
+    /* background-color: blue; */
+}
+
+#page5-box h6{
+    font-size: 1vw;
+    margin-bottom: 1.3vw;
+}
+
+#page5-box h5{
+    font-size: 1.5vw;
+}
+
+#page5-content h3{
+    margin-left: 27%;
+    padding-bottom: 3vw;
+    font-size: 1.1vw;
+    font-weight: 400;
+}
+
