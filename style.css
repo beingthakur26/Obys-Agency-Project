@@ -444,18 +444,18 @@ video{
     /* padding-top: 10vw; */
 }
 
-.page5-header{
+.page6-header{
     position: relative;
 }
 
-.page5-header svg{
+.page6-header svg{
     position: absolute;
     right: 15vw;
     top: 6vw;
     /* background-color: red; */
 }
 
-#page5-content h1{
+#page6-content h1{
     font-size: 7.2vw;
     font-weight: 600;
     text-transform: uppercase;
@@ -464,7 +464,7 @@ video{
     position: relative;
 }
 
-#page5-content h1::before{
+#page6-content h1::before{
     position: absolute;
     content: "04";
     font-family: "Silk Serif";
@@ -474,7 +474,7 @@ video{
     top: 39%;
 }
 
-.underline-page5{
+.underline-page6{
     border-bottom: 2px solid rgba(230, 225, 225, 0.484);
     /* margin-top: 4vw; */
     margin-left: 27%;
@@ -483,7 +483,7 @@ video{
     margin-bottom: 3vw;
 }
 
-.page5-div{
+.page6-div{
     width: 67vw;
     /* background-color: red; */
     margin-left: 27%;
@@ -493,21 +493,21 @@ video{
     padding: 3vw 0;
 }
 
-#page5-box{
+#page6-box{
     width: 18vw;
     /* background-color: blue; */
 }
 
-#page5-box h6{
+#page6-box h6{
     font-size: 1vw;
     margin-bottom: 1.3vw;
 }
 
-#page5-box h5{
+#page6-box h5{
     font-size: 1.5vw;
 }
 
-#page5-content h3{
+#page6-content h3{
     margin-left: 27%;
     padding-bottom: 3vw;
     font-size: 1.1vw;
