@@ -95,11 +95,11 @@ function LoaderAnimation() {
  }
 
 //  function CursorAnimation() {
-//         //  gsap.to("#cursor",{
-//         //      left: dets.x,
-//         //      top: dets.y
+        //  gsap.to("#cursor",{
+        //      left: dets.x,
+        //      top: dets.y
              
-//         //     })
+        //     })
 
 //         Shery.mouseFollower({
 //             skew: true,
@@ -107,10 +107,10 @@ function LoaderAnimation() {
 //             duration: 1,
 //         });
         
-//         Shery.makeMagnet("#nav-part2 h4", {
-//               ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-//               duration: 1,
-//         });
+        // Shery.makeMagnet("#nav-part2 h4", {
+        //       ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        //       duration: 1,
+        // });
 
 //         var video = document.querySelector("#video-container")
 //         video.addEventListener("mouseenter", function(){
@@ -127,11 +127,14 @@ function LoaderAnimation() {
 function CursorAnimation() {
   Shery.mouseFollower({
     skew: true,
-    // ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     duration: 1,
   });
 
-  Shery.makeMagnet("#nav-part2 h4");
+  Shery.makeMagnet("#nav-part2 h4", {
+      ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+      duration: 1,
+   }); 
 
   var videoContainer = document.querySelector("#video-container");
   var video = document.querySelector("#video-container video")
@@ -212,6 +215,47 @@ function flagAnimation() {
 
 }
 
+function footerAnimation() {
+
+  var clutter = ""
+  var clutter2 = ""
+  document.querySelector("#page6 h1").textContent.split("").forEach(function (elem) {
+    clutter += `<span>${elem}</span>`
+  })
+  document.querySelector("#page6 h1").innerHTML = clutter
+  document.querySelector("#page6 h2").textContent.split("").forEach(function (elem) {
+    clutter2 += `<span>${elem}</span>`
+  })
+  document.querySelector("#page6 h2").innerHTML = clutter2
+
+
+  document.querySelector(".page6-header").addEventListener("mouseenter", function () {
+    gsap.to("#page6 h1 span", {
+      opacity: 0,
+      stagger: 0.05
+    })
+    gsap.to("#page6 h2 span", {
+      delay: 0.35,
+      opacity: 1,
+      stagger: 0.1
+    })
+  })
+  document.querySelector(".page6-header").addEventListener("mouseleave", function () {
+    gsap.to("#page6 h1 span", {
+      opacity: 1,
+      stagger: 0.1,
+      delay: 0.35,
+
+    })
+    gsap.to("#page6 h2 span", {
+      opacity: 0,
+      stagger: 0.05
+    })
+  })
+}
+
+
+footerAnimation()
 flagAnimation()
 SheryAnimation()
 LocomotiveAnimaion()
